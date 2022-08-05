@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Status</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of useraccess;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{user.blocked}}</td>
+            
+            <td>
+                <button *ngIf="user.blocked== 'ACTIVE' " type="button" class="btn btn-success" (click)="Blocked(user)">BLOCK USER</button>
+                &nbsp;
+                <button *ngIf="user.blocked== 'BLOCKED' " type="button" class="btn btn-success" (click)="Unblocked(user)">UNBLOCK USER</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
