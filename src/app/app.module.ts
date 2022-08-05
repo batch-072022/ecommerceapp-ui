@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
       FormsModule,
-      Ng2SearchPipeModule
+      Ng2SearchPipeModule,
+      HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
