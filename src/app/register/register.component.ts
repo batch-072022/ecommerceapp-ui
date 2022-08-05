@@ -17,4 +17,8 @@ export class RegisterComponent implements OnInit {
     localStorage.setItem("IS_REG", "true");
     localStorage.setItem("ROLE","USER");
   }
+
+  onClick(){
+    alert("Password Reset Successfull");
+  }
 }
