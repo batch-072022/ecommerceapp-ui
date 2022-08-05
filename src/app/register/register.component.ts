@@ -11,5 +11,10 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  onSubmit(){
+    alert("Successfully Registered");
+    localStorage.setItem("IS_REG", "true");
+    localStorage.setItem("ROLE","USER");
+  }
 }
