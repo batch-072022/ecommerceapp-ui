@@ -1,0 +1,27 @@
+
+<div class ="container text-center">  
+  </div>
+  <div class ="container">
+    <div class="row">
+      <div class ="search-user">
+        <input class ="form-control" type ="text" name="search" [(ngModel)] ="searchText" autoComplete="off" placeholder="Start searching by email">
+  
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>name</th>
+            <th>email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor= "let user of users|filter:searchText">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
