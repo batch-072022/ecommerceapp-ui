@@ -26,7 +26,7 @@ export class BlockUserComponent implements OnInit {
 
  Blocked(user:any){
   const url="http://localhost:3000/useraccess/"+user.id;
-let userObj= {id:user.id,blocked:"BLOCKED"}
+let userObj= {id:user.id,status:"BLOCKED"}
   this.http.patch(url,userObj).subscribe((res:any)=>{
   this.useraccess = res;
   alert("User is Blocked");
@@ -36,7 +36,7 @@ let userObj= {id:user.id,blocked:"BLOCKED"}
 
  Unblocked(user:any){
   const url="http://localhost:3000/useraccess/"+user.id;
-  let userObj= {id:user.id,blocked:"ACTIVE"}
+  let userObj= {id:user.id,status:"ACTIVE"}
   this.http.patch(url,userObj).subscribe((res:any)=>{
   this.useraccess = res;
   alert("User is Un-Blocked");

@@ -9,12 +9,12 @@
     <tbody>
         <tr *ngFor="let user of useraccess;let i=index">
             <td>{{i+1}}</td>
-            <td>{{user.blocked}}</td>
+            <td>{{user.status}}</td>
             
             <td>
-                <button *ngIf="user.blocked== 'ACTIVE' " type="button" class="btn btn-success" (click)="Blocked(user)">BLOCK USER</button>
+                <button *ngIf="user.status== 'ACTIVE' " type="button" class="btn btn-success" (click)="Blocked(user)">BLOCK USER</button>
                 &nbsp;
-                <button *ngIf="user.blocked== 'BLOCKED' " type="button" class="btn btn-success" (click)="Unblocked(user)">UNBLOCK USER</button>
+                <button *ngIf="user.status== 'BLOCKED' " type="button" class="btn btn-success" (click)="Unblocked(user)">UNBLOCK USER</button>
             </td>
         </tr>
     </tbody>
