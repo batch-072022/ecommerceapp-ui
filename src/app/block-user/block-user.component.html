@@ -1,7 +1,13 @@
+<h1>USERS LIST</h1>
+
 <table class="table table-bordered">
     <thead>
         <tr>
             <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Role</th>
             <th>Status</th>
             
         </tr>
@@ -9,8 +15,11 @@
     <tbody>
         <tr *ngFor="let user of useraccess;let i=index">
             <td>{{i+1}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.role}}</td>
             <td>{{user.status}}</td>
-            
             <td>
                 <button *ngIf="user.status== 'ACTIVE' " type="button" class="btn btn-success" (click)="Blocked(user)">BLOCK USER</button>
                 &nbsp;
