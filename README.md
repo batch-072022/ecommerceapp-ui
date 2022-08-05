@@ -1,4 +1,4 @@
-# Ecommerce App
+# Ecommerce App ( https://ecommerceapp-angular.netlify.app )
 
 Scrum Team #1: 
 Module : Authentication/User
