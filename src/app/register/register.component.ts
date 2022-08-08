@@ -8,9 +8,6 @@ import axios from "axios";
 })
 
 export class RegisterComponent implements OnInit {
-  public name!: string;
-  public email!: string;
-  public password!: string;
   constructor() { }
 
   ngOnInit(): void {
@@ -27,17 +24,27 @@ export class RegisterComponent implements OnInit {
     alert("Password Reset Successfull");
   }
 
+  users = {
+    name: "",
+    email: "",
+    password: ""
+  }
+
+  onSubmit(){
+    alert("Registration Successful Mr/Ms  " + JSON.stringify(this.users.name));
+  }
+
   register() {
-    console.log("Name:" + this.name + ", email:" + this.email + ", password:" + this.password);
+    console.log("Name:" + this.users.name + ", email:" + this.users.email + ", password:" + this.users.password);
 
     try {
-      if (this.name == null || this.name == "") {
+      if (this.users.name == null || this.users.name == "") {
         throw new Error("Name cannot be empty");
       }
-      if (this.email == null || this.email == "") {
+      if (this.users.email == null || this.users.email == "") {
         throw new Error("Email cannot be empty");
       }
-      if (this.password == null || this.password == "") {
+      if (this.users.password == null || this.users.password == "") {
         throw new Error("Password cannot be empty");
       }
       console.log("Validation Success.")
@@ -45,12 +52,14 @@ export class RegisterComponent implements OnInit {
       console.error("Error:" + err.message);
     }
     
-    const userObj = { "name": this.name, "email": this.email, "password": this.password };
+    const userObj = { "name": this.users.name, "email": this.users.email, "password": this.users.password };
     console.log(userObj);
 
     const url = "https://ecommerce-apii.herokuapp.com/users";
+    //const url = "http://localhost:3000/users";
     axios.post(url, userObj).then((res: any) => {
       console.log("Response:", res.data);
+      this.onSubmit()
     });
   }
 }

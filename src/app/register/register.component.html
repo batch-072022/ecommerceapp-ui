@@ -1,28 +1,36 @@
 <br><br>
 <h1>Register To Our Platform</h1><br>
-<table class="table">
-    <thead class="table-warning">
-        <div>
-            <form (ngSubmit)="register()" novalidate>
-                <div class="col">
-                    <label for="name" class="form-label"> Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="text" class="form-control" placeholder="Enter Full Name" id="name">
-                </div><br>
-                <div class="col">
-                    <label for="email" class="form-label">Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="email" class="form-control" placeholder="Enter Valid Mail ID" id="email">
-                </div><br>
-                <div class="col">
-                    <label for="password" class="form-label">Password</label>&nbsp;
-                    <input type="password" class="form-control" placeholder="Alphanumeric and symbols" id="password">
-                </div><br>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary" (submit)="register()">Submit</button>
-                </div><br>
-            </form>
-        </div>
-    </thead>
-    <div class="col-12">
-        <button class="btn btn-info" (click)="onClick()">Reset Password</button>
-    </div>
-</table>
+<div>
+    <form (ngSubmit)="register()">
+        <div class="col">
+            <label for="name" class="form-label"> Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="name" class="form-control" placeholder="Enter Full Name" id="name" required
+                [(ngModel)]="users.name" #name="ngModel" [ngClass]="{'is-invalid': name.invalid}" [ngModelOptions]="{standalone: true}">
+                <div class="invalid-feedback" *ngIf="name.invalid">
+                    Name is Required
+                </div>
+        </div><br>
+        <div class="col">
+            <label for="email" class="form-label">Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="email" class="form-control" placeholder="Enter Valid Mail ID" id="email" required
+                [(ngModel)]="users.email" #email="ngModel" [ngClass]="{'is-invalid': email.invalid}" [ngModelOptions]="{standalone: true}">
+            <div class="invalid-feedback" *ngIf="email.invalid">
+                Email is Required
+            </div>
+        </div><br>
+        <div class="col">
+            <label for="password" class="form-label">Password</label>&nbsp;
+            <input type="password" class="form-control" placeholder="Alphanumeric and symbols" id="password" required
+                [(ngModel)]="users.password" #password="ngModel" [ngClass]="{'is-invalid': password.invalid}" [ngModelOptions]="{standalone: true}">
+            <div class="invalid-feedback" *ngIf="password.invalid">
+                Password is Required
+            </div>
+        </div><br>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" [disabled]="">Submit</button>
+        </div><br>
+    </form>
+</div>
+<div class="col-12">
+    <button class="btn btn-info" (click)="onClick()">Reset Password</button>
+</div>

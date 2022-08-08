@@ -1,16 +1,14 @@
 {
-  "users": [
-    {
-      "id":1,
-      "name": "Aaa",
-      "email": "a@gmail.com",
-      "password": "typicode"
-    },
-    {
-      "id":2,
-      "name": "Baa",
-      "email": "b@gmail.com",
-      "password": "typicode1"
-    }
-  ]
-}
+    "users": [
+      {
+        "name": "Aaa",
+        "email": "a@gmail.com",
+        "password": "typicode"
+      },
+      {
+        "name": "Baa",
+        "email": "b@gmail.com",
+        "password": "typicode1"
+      }
+    ]
+  }
