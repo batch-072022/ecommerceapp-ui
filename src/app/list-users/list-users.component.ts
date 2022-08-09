@@ -17,8 +17,7 @@ export class ListUsersComponent implements OnInit {
   users:any;
   title = 'ecommerceapp-ui';
   searchText: any;
-  result=[0];
-  getUsers(){
+    getUsers(){
     const url = " https://ecommerce-apii.herokuapp.com/users";
 
     this.http.get(url).subscribe ((res:any)=>{
