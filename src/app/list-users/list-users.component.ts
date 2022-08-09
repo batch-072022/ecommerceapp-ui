@@ -17,12 +17,14 @@ export class ListUsersComponent implements OnInit {
   users:any;
   title = 'ecommerceapp-ui';
   searchText: any;
+  result=[0];
   getUsers(){
-    const url = "http://localhost:3000/users";
+    const url = " https://ecommerce-apii.herokuapp.com/users";
 
     this.http.get(url).subscribe ((res:any)=>{
       this.users = res;
     })
+    
   }
 
 }
