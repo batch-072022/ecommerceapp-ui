@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import axios from "axios";
+import { HttpClient } from '@angular/common/http';
+import { NgForOf, NgIf } from '@angular/common';
+import { EmailValidator } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -8,63 +11,68 @@ import axios from "axios";
 })
 
 export class RegisterComponent implements OnInit {
-  constructor() { }
+  constructor(private http:HttpClient) { 
 
-  ngOnInit(): void {
   }
 
-  /*onSubmit() {
-    alert("Successfully Registered");
-    localStorage.setItem("IS_REG", "true");
-    localStorage.setItem("ROLE", "USER");
-    localStorage.setItem("STATUS", "ACTIVE");
-  }*/
+  ngOnInit(): void {
+    this.getUsers()
+  }
 
   onClick() {
     alert("Password Reset Successfull");
   }
 
-  users = {
+  user = {
     name: "",
     email: "",
     password: ""
   }
-
-
-  onSubmit(){
-    alert("Registration Successful");
+  
+  users!:any[]
+  getUsers(){
+    //const url = " https://ecommerce-apii.herokuapp.com/users";
+    const url = "http://localhost:3000/users";
+    this.http.get(url).subscribe ((res:any)=>{
+      this.users = res;
+    })
   }
 
   register() {
-    console.log("Name:" + this.users.name + ", email:" + this.users.email + ", password:" + this.users.password);
+    console.log("Name:" + this.user.name + ", email:" + this.user.email + ", password:" + this.user.password);
 
     try {
-      if (this.users.name == null || this.users.name == "") {
+      if (this.user.name == null || this.user.name == "") {
         throw new Error("Name cannot be empty");
       }
-      if (this.users.email == null || this.users.email == "") {
+      if (this.user.email == null || this.user.email == "") {
         throw new Error("Email cannot be empty");
       }
-      if (this.users.password == null || this.users.password == "") {
+      if (this.user.password == null || this.user.password == "") {
         throw new Error("Password cannot be empty");
       }
+
+      for(let user of this.users){
+        if (user.email==this.user.email){
+          throw new Error("Email Already Registered");
+        }
+      }
+
       console.log("Validation Success.")
-    }catch(err: any) {
-      console.error("Error:" + err.message);
-    }
+
     
-    const userObj = { "name": this.users.name, "email": this.users.email, "password": this.users.password, "role": "USER", "status": "ACTIVE"};
+    const userObj = { "name": this.user.name, "email": this.user.email, "password": this.user.password, "role": "USER", "status": "ACTIVE"};
     console.log(userObj);
-    
-    /*usersGet(){
-      const url = "https://ecommerce-apii.herokuapp.com/users";
-      return get(url);
-    }*/
-    const url = "https://ecommerce-apii.herokuapp.com/users";
-    //const url = "http://localhost:3000/users";
+  
+    //const url = "https://ecommerce-apii.herokuapp.com/users";
+    const url = "http://localhost:3000/users";
     axios.post(url, userObj).then((res: any) => {
       console.log("Response:", res.data);
-      this.onSubmit()
+      alert("Registration Successful");
     });
+  }catch(err: any) {
+    console.error("Error:" + err.message);
+    alert(err.message);
+  }
   }
 }
