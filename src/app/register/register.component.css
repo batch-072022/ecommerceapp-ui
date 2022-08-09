@@ -3,11 +3,16 @@ div
   display:flex;
   align-items:center;
   justify-content:center;
-  
 }
 
 h1 {
     text-align:center;
-    text-shadow: 5px 1px #c9f5ea;
+    /*background: #7419db;
+    color: #dfe7e9;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
 }
 

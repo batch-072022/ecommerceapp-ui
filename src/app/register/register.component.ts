@@ -30,8 +30,9 @@ export class RegisterComponent implements OnInit {
     password: ""
   }
 
+
   onSubmit(){
-    alert("Registration Successful Mr/Ms  " + JSON.stringify(this.users.name));
+    alert("Registration Successful");
   }
 
   register() {
@@ -52,9 +53,13 @@ export class RegisterComponent implements OnInit {
       console.error("Error:" + err.message);
     }
     
-    const userObj = { "name": this.users.name, "email": this.users.email, "password": this.users.password };
+    const userObj = { "name": this.users.name, "email": this.users.email, "password": this.users.password, "role": "USER", "status": "ACTIVE"};
     console.log(userObj);
-
+    
+    /*usersGet(){
+      const url = "https://ecommerce-apii.herokuapp.com/users";
+      return get(url);
+    }*/
     const url = "https://ecommerce-apii.herokuapp.com/users";
     //const url = "http://localhost:3000/users";
     axios.post(url, userObj).then((res: any) => {
