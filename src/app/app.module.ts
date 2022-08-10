@@ -7,11 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListMyProductsComponent } from './list-my-products/list-my-products.component';
+import { ListProductsComponent } from './list-products/list-products.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ListMyProductsComponent,
+    ListProductsComponent
   ],
   imports: [
     BrowserModule,

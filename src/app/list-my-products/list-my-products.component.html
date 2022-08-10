@@ -1,0 +1,21 @@
+
+<h3>My Products {{id}}</h3>
+
+<!-- {{products| json}} -->
+
+<div class="row" *ngIf="products">
+    <div class="col-4" >
+        <img src="assets/images/{{products.image}}" 
+        width="200px" height="400px" class="card-img-top" 
+        alt="...">
+    </div>
+    <div class="col-8">
+           <div class="card-body">
+                <h5 class="card-title">{{products.brand}}</h5>
+                <p class="card-text">{{products.name}} <br/> 
+                    price: {{products.price | currency:'INR'}} <br/>
+                </p>
+           </div>
+    </div>
+</div>
+
