@@ -13,6 +13,7 @@ import { ProductModule } from './product/product.module';
 import { LoginComponent } from './login/login.component';
 
 import { RegisterComponent } from './register/register.component';
+import { CreateMerchantComponent } from './create-merchant/create-merchant.component';
 
 
 @NgModule({
@@ -20,11 +21,9 @@ import { RegisterComponent } from './register/register.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-
     LoginComponent,
-
     RegisterComponent,
-
+    CreateMerchantComponent,
   ],
   imports: [
     BrowserModule,
