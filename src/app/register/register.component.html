@@ -5,15 +5,17 @@
         <div class="col">
             <label for="name" class="form-label"> Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="name" class="form-control" placeholder="Enter Full Name" id="name" required
-                [(ngModel)]="user.name" #name="ngModel" [ngClass]="{'is-invalid': name.invalid && !name.pristine}" [ngModelOptions]="{standalone: true}">
-                <div class="invalid-feedback" *ngIf="!name.pristine && name.invalid">
-                    Name is Required
-                </div>
+                [(ngModel)]="user.name" #name="ngModel" [ngClass]="{'is-invalid': name.invalid && !name.pristine}"
+                [ngModelOptions]="{standalone: true}">
+            <div class="invalid-feedback" *ngIf="!name.pristine && name.invalid">
+                Name is Required
+            </div>
         </div><br>
         <div class="col">
             <label for="email" class="form-label">Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="email" class="form-control" placeholder="Enter Valid Mail ID" id="email" required
-                [(ngModel)]="user.email" #email="ngModel" [ngClass]="{'is-invalid': email.invalid}" [ngModelOptions]="{standalone: true}">
+                [(ngModel)]="user.email" #email="ngModel" [ngClass]="{'is-invalid': email.invalid && !email.pristine}"
+                [ngModelOptions]="{standalone: true}">
             <div class="invalid-feedback" *ngIf="!email.pristine && email.invalid">
                 Email is Required
             </div>
@@ -21,7 +23,9 @@
         <div class="col">
             <label for="password" class="form-label">Password</label>&nbsp;
             <input type="password" class="form-control" placeholder="Alphanumeric and symbols" id="password" required
-                [(ngModel)]="user.password" #password="ngModel" [ngClass]="{'is-invalid': password.invalid}" [ngModelOptions]="{standalone: true}">
+                [(ngModel)]="user.password" #password="ngModel"
+                [ngClass]="{'is-invalid': password.invalid && !password.pristine}"
+                [ngModelOptions]="{standalone: true}">
             <div class="invalid-feedback" *ngIf="!password.pristine && password.invalid">
                 Password is Required
             </div>
@@ -34,4 +38,3 @@
 <div class="col-12">
     <button class="btn btn-info" routerLink="/login">Reset Password</button>
 </div>
-
