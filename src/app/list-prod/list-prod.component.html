@@ -1,0 +1,20 @@
+<h1>List Products</h1>
+<table class="table table-bordered" *ngIf="products">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Prod_Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of products;let i=index">
+            <td>{{u.id}}</td>
+            <td>{{u.Prod_Name}}</td>
+            <td>{{u.Price}}</td>
+            <td>
+                <a routerLink="/edituser" class="btn btn-info">Update</a> &nbsp;&nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>
