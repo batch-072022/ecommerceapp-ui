@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { SearchProductComponent } from './search-product/search-product.component';
 
 const routes: Routes = [
   {path:'home', component: HomeComponent},
+  {path:'searchproduct',component:SearchProductComponent},
   {path:'', redirectTo:'home', pathMatch:'full'}
 ];
 

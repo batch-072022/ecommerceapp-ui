@@ -7,11 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchProductComponent } from './search-product/search-product.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    SearchProductComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -19,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
