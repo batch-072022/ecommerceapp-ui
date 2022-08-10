@@ -19,10 +19,6 @@ export class RegisterComponent implements OnInit {
     this.getUsers()
   }
 
-  onClick() {
-    alert("Password Reset Successfull");
-  }
-
   user = {
     name: "",
     email: "",
