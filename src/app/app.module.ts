@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+
+import { LoginComponent } from './login/login.component';
+
 import { UserModule } from './user/user.module';
 import { ProductModule } from './product/product.module';
 
@@ -15,6 +18,14 @@ import { ProductModule } from './product/product.module';
     AppComponent,
     HeaderComponent,
     HomeComponent,
+
+
+    LoginComponent
+
+    
+  
+
+
   ],
   imports: [
     BrowserModule,
