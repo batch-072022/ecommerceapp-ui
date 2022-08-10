@@ -9,14 +9,22 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserModule } from './user/user.module';
 import { ProductModule } from './product/product.module';
+
 import { LoginComponent } from './login/login.component';
+
+import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
+
     LoginComponent,
+
+    RegisterComponent,
+
   ],
   imports: [
     BrowserModule,
