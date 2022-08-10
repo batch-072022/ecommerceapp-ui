@@ -8,13 +8,12 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserModule } from './user/user.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    
-  
   ],
   imports: [
     BrowserModule,
@@ -23,8 +22,7 @@ import { UserModule } from './user/user.module';
     ReactiveFormsModule,
     HttpClientModule,
     UserModule
-    
-  ],
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })
