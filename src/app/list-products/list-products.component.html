@@ -1,0 +1,31 @@
+<h3>Products List</h3>
+<div class="row">
+    <div class="col">
+      Search:
+      <input type="text" name="Search" [(ngModel)]="brand"/>
+      <button type="submit" class="sraechButton">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+</div><br/>
+
+<div class="row">
+    <div class="col" *ngFor="let products of products | brand: brand | product:product" >
+     <div class="card" style="width: 18rem;" >
+         <img src="assets/image/{{products.image}}" width="400px" height="300px" class="card-img-top" alt="" >
+            <div class="card-body">
+             <h5 class="card-title">{{products.brand}}</h5>
+                 <p class="card-text">{{products.name}} <br/> price: {{products.price | currency:'INR'}} <br/>
+                     </p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star "></span><br/>
+                <a routerLink="/myproducts" class="btn btn-light">View</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
