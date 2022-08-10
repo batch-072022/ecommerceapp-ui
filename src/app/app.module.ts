@@ -7,13 +7,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ViewComponent } from './view/view.component';
+import { UserModule } from './user/user.module';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ViewComponent
+    
   
   ],
   imports: [
@@ -21,7 +21,8 @@ import { ViewComponent } from './view/view.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    UserModule
     
   ],
   providers: [],
