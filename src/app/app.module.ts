@@ -14,8 +14,6 @@ import { UserModule } from './user/user.module';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    
-  
   ],
   imports: [
     BrowserModule,
@@ -25,6 +23,7 @@ import { UserModule } from './user/user.module';
     HttpClientModule,
     UserModule
   ],
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,33 @@
+<h1>List of Products</h1>
+{{products | json }}
+<table class="Table table-bordered" *ngIf="products">
+    <thead>
+        <tr>
+        <th> Sno</th>
+        <th>id</th>
+        <th> ProductName</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>        
+
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products ; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{p.id}}</td>
+            <td>{{p.title}}</td>
+            <td> {{p.status}}</td>
+            <td>
+                <a routerLink="/view-user" class="btn btn-info">edit</a> &nbsp;&nbsp;
+                <button type="button" class="btn btn-danger"
+                (click)="deleteproduct(p.id) ">Delete</button>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div *ngIf="!products">
+    No records
+</div>
+ 
