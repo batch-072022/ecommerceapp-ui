@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-view',
-  templateUrl: './view.component.html',
-  styleUrls: ['./view.component.css']
+  selector: 'app-view-user',
+  templateUrl: './view-user.component.html',
+  styleUrls: ['./view-user.component.css']
 })
-export class ViewComponent implements OnInit {
+export class ViewUserComponent implements OnInit {
   id: any;
   
 
@@ -27,7 +27,4 @@ viewuser(id:number){
     this.user=res;
   })
 }
-
-
-
 }
