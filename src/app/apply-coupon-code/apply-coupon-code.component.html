@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <table class="table table-bordered" *ngIf="coupon">  
+
+    <thead>
+
+        <tr>
+
+            <th>Id</th>
+            <th>Total Amount</th>
+
+            <th>Coupon code</th>
+
+            <th>Percentage</th>
+
+            <th>status</th>
+
+            <th>expiry-date</th>
+            <th>FinalAmount</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let u of coupon;let i=index">
+
+            <td>{{u.id}}</td>
+            <td>{{u.TotalAmount}}</td>
+
+            <td>{{u.code}}</td>
+
+            <td>{{u.percentage}}</td>
+
+            <td>{{u.status}}</td>
+
+            <td>{{u.expirydate}}</td>
+            <td>{{u.FinalAmount}}</td>
+            <td>
+
+              <a routerLink="/edituser" class="btn btn-info" (click)="Apply()">Apply</a> &nbsp;&nbsp;
+
+          </td>
+      
+          </tr>
+
+
+    </tbody>
+
+</table>
+</body>
+</html>
