@@ -22,6 +22,7 @@ import { UserModule } from './user/user.module';
     ReactiveFormsModule,
     HttpClientModule,
     UserModule
+  ],
    ],
   providers: [],
   bootstrap: [AppComponent]
