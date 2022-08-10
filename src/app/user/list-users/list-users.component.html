@@ -16,6 +16,7 @@
         <th>Role</th>
         <th>Status</th>
         <th>Action</th>
+        <th>Access</th>
         
       </tr>
       </thead>
@@ -28,7 +29,11 @@
         <td>{{user.role}}</td>
         <td>{{user.status}}</td>
         <td><a routerLink="{{user.id}}" class="btn btn-info" type="button">View</a></td>
-      
+        <td>
+          <button *ngIf="user.status== 'ACTIVE' " type="button" class="btn btn-danger" (click)="Blocked(user)">BLOCK</button>
+          &nbsp;
+          <button *ngIf="user.status== 'BLOCKED' " type="button" class="btn btn-success" (click)="Unblocked(user)">UNBLOCK</button>
+      </td>
       </tr>
       </tbody>
     </table>
