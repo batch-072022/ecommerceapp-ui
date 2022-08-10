@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 
 import { UserModule } from './user/user.module';
+import { ProductModule } from './product/product.module';
 
 @NgModule({
   declarations: [
@@ -32,9 +33,9 @@ import { UserModule } from './user/user.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    UserModule
+    UserModule,
+    ProductModule
   ],
-   ],
   providers: [],
   bootstrap: [AppComponent]
 })
