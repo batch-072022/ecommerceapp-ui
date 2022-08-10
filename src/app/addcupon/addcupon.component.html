@@ -1,0 +1,38 @@
+<p>addcupon works!</p>
+<p>update-coupon-code works!</p>
+
+<table class="table table-bordered" *ngIf="coupons">
+
+  <thead>
+
+    <tr>
+      <th>id</th>
+      <th>COUPON_CODE</th>
+      <th>Expiry_Date</th>
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let u of coupons;let i=index">
+
+            <td>{{u.id}}</td>
+
+            <td>{{u.CouponId}}</td>
+            <td>{{u.exp}}</td>
+            <td>
+        
+                <button type="button" class="btn btn-danger"
+        
+                (click)="Updateexp()">Update</button>
+        
+              </td>
+
+        </tr>
+        
+
+  </tbody>
+
+</table>
