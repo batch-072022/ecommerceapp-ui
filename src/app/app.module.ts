@@ -18,10 +18,12 @@ import { UserModule } from './user/user.module';
     HeaderComponent,
     HomeComponent,
 
+
     LoginComponent
 
     
   
+
 
   ],
   imports: [
@@ -31,8 +33,8 @@ import { UserModule } from './user/user.module';
     ReactiveFormsModule,
     HttpClientModule,
     UserModule
-    
   ],
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })
