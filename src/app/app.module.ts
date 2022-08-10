@@ -7,13 +7,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DeleteproductComponent } from './deleteproduct/deleteproduct.component';
+import { UserModule } from './user/user.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    DeleteproductComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +21,8 @@ import { DeleteproductComponent } from './deleteproduct/deleteproduct.component'
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-  ],
+    UserModule
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })
