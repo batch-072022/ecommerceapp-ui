@@ -1,0 +1,36 @@
+<p>listcoupon works!</p>
+<h1>List coupons</h1>
+
+<table class="table table-bordered" *ngIf="coupons">  
+
+    <thead>
+
+        <tr>
+
+            <th>Id</th>
+
+            <th>Code</th>
+            <th>Action</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let u of coupons;let i=index">
+
+            <td>{{u.id}}</td>
+
+            <td>{{u.code}}</td>
+
+            <td>
+
+                <a routerLink="/edituser" class="btn btn-info">Delete</a> &nbsp;&nbsp;
+
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>

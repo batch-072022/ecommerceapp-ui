@@ -1,0 +1,22 @@
+<p>delete-coupon-code works!</p>
+<table class="table table-bordered" *ngIf="cupons">
+  <thead>
+    <tr>
+        <!--
+      <th>Sno</th>
+      <th>CuponId</th>
+      <th>Cupon</th>-->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users;let i=index">
+      <td>
+        <a routerLink="/viewuser" class="btn btn-primary">View</a>
+         &nbsp;&nbsp;
+        <a routerLink="/edituser" class="btn btn-info">Edit</a> &nbsp;&nbsp;
+        <button type="button" class="btn btn-danger"
+        (click)="deleteUser()">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
