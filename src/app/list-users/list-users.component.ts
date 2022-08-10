@@ -25,5 +25,27 @@ export class ListUsersComponent implements OnInit {
     })
     
   }
+  user:any;
+  Blocked(user:any){
+   const url="https://ecommerce-apii.herokuapp.com/users"+user.id;
+ let userObj= {id:user.id,status:"BLOCKED"}
+   this.http.patch(url,userObj).subscribe((res:any)=>{
+   //this.useraccess = res;
+   alert("User is Blocked");
+    
+   })
+  }
+  Unblocked(user:any){
+    const url="https://ecommerce-apii.herokuapp.com/users"+user.id;
+    let userObj= {id:user.id,status:"ACTIVE"}
+    this.http.patch(url,userObj).subscribe((res:any)=>{
+   // this.useraccess = res;
+    alert("User is Un-Blocked");
+    })
+  
+  
+  
+   }
+   
 
 }
