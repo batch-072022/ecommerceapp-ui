@@ -31,8 +31,8 @@ export class RegisterComponent implements OnInit {
   
   users!:any[]
   getUsers(){
-    //const url = " https://ecommerce-apii.herokuapp.com/users";
-    const url = "http://localhost:3000/users";
+    const url = " https://ecommerce-apii.herokuapp.com/users";
+    //const url = "http://localhost:3000/users";
     this.http.get(url).subscribe ((res:any)=>{
       this.users = res;
     })
@@ -64,8 +64,8 @@ export class RegisterComponent implements OnInit {
     const userObj = { "name": this.user.name, "email": this.user.email, "password": this.user.password, "role": "USER", "status": "ACTIVE"};
     console.log(userObj);
   
-    //const url = "https://ecommerce-apii.herokuapp.com/users";
-    const url = "http://localhost:3000/users";
+    const url = "https://ecommerce-apii.herokuapp.com/users";
+    //const url = "http://localhost:3000/users";
     axios.post(url, userObj).then((res: any) => {
       console.log("Response:", res.data);
       alert("Registration Successful");
