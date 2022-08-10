@@ -1,4 +1,4 @@
-<!-- <h3>mobile</h3>
+<h3>mobile</h3>
 <h6>Search by price:</h6>
  <div>
     <input type="text" name="SearchByPrice"  placeholder="searchByPrice" [(ngModel)]="SearchByPrice" />
@@ -13,7 +13,7 @@
     <option value="20000">20000</option>
 
 </select>
- </div> -->
+ </div>
   <!-- <br>
 <table border="1">
   <thead>
@@ -27,13 +27,16 @@
   </tbody>
 </table> -->
 
-<!-- <br>
+<br>
 <table class="table table-dark">
   <thead>
     <tr>
       <th scope="col">Id</th>
-      <th scope="col">Name</th>
+      <th scope="col">Title</th>
+      <!-- <th scope="col">Name</th> -->
       <th scope="col">Price</th>
+     
+      
       
     </tr>
   </thead>
@@ -42,10 +45,10 @@
       <tr *ngFor="let p of products | searchByPrice:SearchByPrice">
       
       <td>{{p.id}}</td>
-      <td>{{p.name}}</td>
-      <td>{{p.Price}}</td>
+      <td>{{p.title}}</td>
+      <!-- <td>{{p.name}}</td> -->
+      <td>{{p.price}}</td>
     </tr>
     </tbody>
 </table>
- -->
-<app-search-by-price-range></app-search-by-price-range>
+

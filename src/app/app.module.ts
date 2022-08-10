@@ -7,11 +7,21 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchByPricePipe } from './search-by-price.pipe';
+import { SearchByPriceRangeComponent } from './search-by-price-range/search-by-price-range.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    SearchByPricePipe,
+    SearchByPriceRangeComponent,
+ 
+  
+   
   ],
   imports: [
     BrowserModule,
