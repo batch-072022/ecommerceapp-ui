@@ -1,0 +1,175 @@
+<!--<p>changeprice works!</p>
+<h1>List Products</h1>
+
+<table class="table table-bordered" *ngIf="products">
+
+    <thead>
+
+        <tr>
+
+            <th>Id</th>
+
+            <th>Prod_Name</th>
+
+            <th>Price</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let u of products;let i=index">
+
+            <td>{{u.id}}</td>
+
+            <td>{{u.Prod_Name}}</td>
+
+            <td>{{u.Price}}</td>
+
+            <td>
+
+                <a routerLink="/listprod" class="btn btn-info">Update</a> &nbsp;&nbsp;
+
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+<h1>changeprice</h1>
+
+<form>
+
+    <table class="table table-bordered" *ngIf="products">
+
+        <tbody >
+
+             <tr>
+
+                <th>Id</th>
+
+                <td>
+
+                    <input type="number" name="id" id="id">
+
+                </td>
+
+
+
+             </tr>
+
+             <tr>
+
+                <th>Name</th>
+
+                <td>
+
+                    <input type="" name="name" id="name">
+                </td>
+
+            </tr>
+
+            <tr>
+
+               <th>price</th>
+
+               <td>
+
+                   <input type="text" name="prod_price" >
+
+               </td>
+
+            </tr>
+
+            <tr>
+
+               <th></th>
+
+               <td>
+
+                   <button type="button" class="btn btn-success"
+
+                   (click)="update()">Update</button>
+
+                   <button type="button" class="btn btn-success"
+
+                   (click)="back()">back</button>
+
+               </td>
+
+            </tr>
+
+       </tbody>
+
+   </table>
+
+      
+
+  
+
+</form>-->
+<h1>change</h1>
+<style>
+
+    label{
+
+        text-align: center;
+
+        display: inline-block;
+
+        width: 90px;
+
+        margin-bottom: 30px;
+
+        margin-left: -50px;
+
+    }
+
+    button{
+
+        margin-left: 50px;
+
+    }
+
+    div{
+
+        text-align: center;
+
+    }
+
+</style>
+
+<div>
+
+    <label for="Prod_id"><b>Prod_Id</b></label>
+
+    <input type="number" placeholder="Prod_Id" id="number" required>
+
+      <br>
+
+        <label for="Prod_Name"><b>Prod_Name</b></label>
+
+        <select name="Prod_Name">
+
+            <option value="select">select</option>
+
+            <option value="Books">Books</option>
+
+            <option value="Laptops">Laptops</option>
+
+            <option value="phones">phones</option>
+
+        </select>   
+        <br>
+
+    <label for="Prod_price"><b>Prod_price</b></label>
+
+    <input type="text" placeholder="Prod_price" id="number" required>
+
+        <button type="button" class="btn btn-danger"
+
+            (click)="change()">change</button>
+</div>
