@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserModule } from './user/user.module';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +24,8 @@ import { UserModule } from './user/user.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    UserModule
-    
+    UserModule,
+    Ng2SearchPipeModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

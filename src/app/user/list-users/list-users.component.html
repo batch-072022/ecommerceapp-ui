@@ -1,0 +1,39 @@
+<div class="container text-center">
+  <h1>List-Users</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="search-user">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Start searching by Email">
+    </div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th>Status</th>
+        
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users | filter:searchText">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.role}}</td>
+        <td>{{user.status}}</td>
+      
+      </tr>
+      </tbody>
+    </table>
+    
+  </div>
+</div>
+<ng-container *ngIf="( users | filter : searchText) as result">
+  
+  <p *ngIf="result.length === 0">No Records Found</p>  
+</ng-container>
