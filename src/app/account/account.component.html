@@ -1,0 +1,17 @@
+<h1>View Wallet</h1>
+<table class="table table-bordered" *ngIf="users">  
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>userId</th>
+            <th>balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users;let i=index">
+            <td>{{u.id}}</td>
+            <td>{{u.userId}}</td>
+            <td>{{u.balance}}</td>
+        </tr>
+    </tbody>
+</table>
