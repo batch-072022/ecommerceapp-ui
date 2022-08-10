@@ -25,7 +25,7 @@ export class SearchByPriceRangeComponent implements OnInit {
 
     console.log('ngOnInit')
 
-    this.http.get('http://localhost:3000/products').subscribe(( res:any)=>{
+    this.http.get('https://ecommerce-apii.herokuapp.com/products').subscribe(( res:any)=>{
 
       this.products = res;
 
