@@ -19,14 +19,14 @@ export class DeleteproductComponent implements OnInit {
   products!:any[];
   
   getProducts(){
-    //const url ="https://ecommerce-apii.herokuapp.com/products"
-    const url ="http://localhost:3000/products/"
+    
+    const url ="https://ecommerce-apii.herokuapp.com/products"
     this.http.get(url).subscribe(( res:any)=>{
          this.products = res;
      }) ;
    }
   deleteproduct(id:number){
-    const url ="http://localhost:3000/products/" +id;
+    const url ="https://ecommerce-apii.herokuapp.com/products/" +id;
     // alert("Successfully Deleted" +id);
     this.http.delete(url).subscribe((res:any)=>{
       console.log(res);
