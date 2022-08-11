@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchBrandComponent } from './search-brand/search-brand.component';
 import { BrandPipe } from '../brand.pipe';
+import { ListProductsComponent } from './list-products/list-products.component';
 
 
 
@@ -13,7 +14,8 @@ import { BrandPipe } from '../brand.pipe';
   declarations: [
     DeleteproductComponent,
     SearchBrandComponent,
-    BrandPipe
+    BrandPipe,
+    ListProductsComponent
   ],
   imports: [
     CommonModule,
