@@ -1,0 +1,47 @@
+<h3>Sellers List</h3>
+
+<div class="row">
+
+    <div class="col">              
+
+    </div>
+
+</div>
+
+<br/>
+
+<div class="row">
+
+        <div class="col-4" *ngFor="let sellers of details">
+
+            <div class="card" style="width: 18rem;" >
+
+                <div class="card-body">
+
+                        <ul class="list-group">
+
+                        <h4 class="card-title">{{sellers.fullname}}</h4>
+
+                        <li class="list-group-item"><b>UserId:</b> {{sellers.username}}</li>
+
+                        <li class="list-group-item"><b>Email:</b> {{sellers.email}}</li>
+
+                        <li class="list-group-item"><b>Contact:</b> {{sellers.number}}</li>
+
+
+
+                      </ul>
+
+                </div>
+
+
+
+              </div>
+
+
+
+        </div>
+
+
+
+</div>
