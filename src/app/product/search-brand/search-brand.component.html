@@ -1,0 +1,22 @@
+
+<h3>Mobile</h3>
+
+Search by Brand Name:
+
+<input type="text" name="brandName" [(ngModel)]="brandName" />
+<select name="brandName" [(ngModel)]="brandName">
+    <option value="Apple">Apple</option>
+    <option value="one plus">One plus</option>
+</select>
+
+<table border="1">
+  <thead>
+    <tr><th>Product Name</th> <th>Brand Name</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products | brand: brandName">
+      <td>{{p.name}}</td>
+      <td>{{p.brand}}</td>
+    </tr>
+  </tbody>
+</table>
