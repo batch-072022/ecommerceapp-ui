@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 
 import { RegisterComponent } from './register/register.component';
 import { CreateMerchantComponent } from './create-merchant/create-merchant.component';
+import { BrandPipe } from './brand.pipe';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CreateMerchantComponent } from './create-merchant/create-merchant.compo
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    CreateMerchantComponent,
+    CreateMerchantComponent
+    
   ],
   imports: [
     BrowserModule,
