@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchBrandComponent } from './search-brand/search-brand.component';
 import { BrandPipe } from '../brand.pipe';
 import { ListSellersComponent } from './list-sellers/list-sellers.component';
+import { ListProductsComponent } from './list-products/list-products.component';
 
 
 
@@ -15,6 +16,7 @@ import { ListSellersComponent } from './list-sellers/list-sellers.component';
     DeleteproductComponent,
     SearchBrandComponent,
     ListSellersComponent,
+    ListProductsComponent,
     BrandPipe
   ],
   imports: [
