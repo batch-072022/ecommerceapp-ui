@@ -1,0 +1,52 @@
+
+<!-- <app-header></app-header>
+<div class="container-fluid">  <router-outlet></router-outlet>
+</div> -->
+
+<h2>Display Products</h2>
+
+Search Category:
+
+<input type="text" name="categorysearch" id="categorysearch" [(ngModel)]="categorysearch">
+<br>
+
+<!-- <table border="1">  <thead>    <tr><th>Product Name</th>  <th>Category</th></tr>  </thead>  <tbody>    <tr *ngFor="let p of products | categorysearch: categorysearch">      <td>{{p.name}}</td>      <td>{{p.Category}}</td>    </tr>  </tbody>
+</table> -->
+<br>
+
+<table class="table table-dark">
+
+  <thead>
+
+    <tr>
+
+      <th scope="col">Id</th>
+
+      <th scope="col">Name</th>
+
+      <th scope="col">Price</th>
+
+     
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr>
+
+         <tr *ngFor="let p of products | categorysearch : categorysearch">     
+
+      <td>{{p.id}}</td>
+
+      <td>{{p.name}}</td>
+
+      <td>{{p.Category}}</td>
+
+    </tr>
+
+    </tbody>
+
+</table>
+

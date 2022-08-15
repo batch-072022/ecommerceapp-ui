@@ -17,6 +17,7 @@ import { CreateMerchantComponent } from './create-merchant/create-merchant.compo
 import { BrandPipe } from './brand.pipe';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { BrandPipe } from './brand.pipe';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    CreateMerchantComponent
+    CreateMerchantComponent,
+   
     
   ],
   imports: [
