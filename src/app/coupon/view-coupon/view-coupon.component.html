@@ -1,0 +1,33 @@
+<h1>View User</h1>
+<table class="table table-bordered" *ngIf="coupon">
+    <tbody>
+        <tr>
+            <th>Sno</th>
+            <td>{{coupon.sno}}</td>
+        </tr>
+        <tr>
+            <th>Coupon Name</th>
+            <td>{{coupon.couponname}}</td>
+        </tr>
+        <tr>
+            <th>Expiry</th>
+            <td>{{coupon.expiry}}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{coupon.status}}</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>
+                
+                
+
+                <button type="button" class="btn btn-success"
+                routerLink="/list">Back</button>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table>
