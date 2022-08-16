@@ -18,6 +18,7 @@ import { BrandPipe } from './brand.pipe';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { BrandPipe } from './brand.pipe';
     LoginComponent,
     RegisterComponent,
     CreateMerchantComponent,
+
    
     
   ],
