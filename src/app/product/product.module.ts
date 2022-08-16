@@ -10,6 +10,8 @@ import { ListSellersComponent } from './list-sellers/list-sellers.component';
 import { ListProductsComponent } from './list-products/list-products.component';
 import { CategorySearchComponent } from './category-search/category-search.component';
 import { CategorysearchPipe } from '../categorysearch.pipe';
+import { SearchByPricePipe } from './search-by-price.pipe';
+import { SearchByPriceRangeComponent } from './search-by-price-range/search-by-price-range.component';
 
 
 
@@ -21,7 +23,9 @@ import { CategorysearchPipe } from '../categorysearch.pipe';
     ListProductsComponent,
     BrandPipe,
     CategorySearchComponent,
-    CategorysearchPipe
+    CategorysearchPipe,
+    SearchByPricePipe,
+    SearchByPriceRangeComponent
   ],
   imports: [
     CommonModule,
