@@ -12,6 +12,8 @@ import { CategorySearchComponent } from './category-search/category-search.compo
 import { CategorysearchPipe } from '../categorysearch.pipe';
 import { SearchProductComponent } from './search-product/search-product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchByPriceRangeComponent } from './search-by-price-range/search-by-price-range.component';
+import { SearchByPricePipe } from './search-by-price.pipe';
 
 
 
@@ -24,7 +26,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrandPipe,
     CategorySearchComponent,
     CategorysearchPipe,
-    SearchProductComponent
+    SearchProductComponent,
+    SearchByPriceRangeComponent,
+    SearchByPricePipe
   ],
   imports: [
     CommonModule,
